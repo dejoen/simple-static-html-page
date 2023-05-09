@@ -20,7 +20,7 @@ header{
     font-size:1.3em;
   justify-content: space-around;
   align-items: center;
-  
+ 
   
   
 
@@ -32,7 +32,8 @@ main{
 
 .circle-card-container{
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    
 }
 .circle-card-container div{
     display: flex;
@@ -89,18 +90,29 @@ search-container{
     border-radius: 15px;
     outline: none;
 }
-@media  (width:600px) {
-    body{
-        background-color: aqua;
-    }
+@media  (min-width:400px) {
+
     .circle-card-container{
         display: flex;
         overflow-x: hidden;
-        background-color: brown;
+        flex-wrap: wrap;
     }
     .circle-card-container div{
         display:flex;
         background-color: blueviolet;
         justify-content: space-around;
+    }
+}
+@media  (min-width:1000px) {
+
+    .circle-card-container{
+        display: flex;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    .circle-card-container div{
+        display:flex;
+        background-color: rgb(179, 138, 218);
+        justify-content: space-evenly;
     }
 }
